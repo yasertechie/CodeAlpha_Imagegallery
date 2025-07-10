@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>My Image Gallery</h1>
+    <div class="filters">
+  <button class="filter-btn all" onclick="filterImages('all')">🌍 All</button>
+  <button class="filter-btn nature" onclick="filterImages('nature')">🌿 Nature</button>
+  <button class="filter-btn city" onclick="filterImages('city')">🏙️ City</button>
+</div>
+
+  </header>
+
+  <div class="gallery">
+    <div class="image-box nature">
+      <img src="https://media.istockphoto.com/id/471926619/photo/moraine-lake-at-sunrise-banff-national-park-canada.jpg?s=612x612&w=0&k=20&c=mujiCtVk5QA697SD3d8V8BGmd91-8HlxCNHkolEA0Bo=" alt="Nature 1" onclick="openLightbox(this)">
+    </div>
+    <div class="image-box city">
+      <img src="https://images.fineartamerica.com/images-medium-large/new-york-city-skyline-morning-twilight-vi-clarence-holmes.jpg" alt="City 1" onclick="openLightbox(this)">
+    </div>
+    <div class="image-box nature">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlJTIwdmlld3xlbnwwfHwwfHx8MA%3D%3D" alt="Nature 2" onclick="openLightbox(this)">
+    </div>
+    <div class="image-box city">
+      <img src="https://previews.123rf.com/images/samot/samot1406/samot140600079/29556809-night-view-from-burj-khalifa-in-dubai-uae.jpg" alt="City 2" onclick="openLightbox(this)">
+    </div>
+  </div>
+  
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img class="lightbox-img" id="lightboxImg" />
+    <div class="nav-btns">
+      <button onclick="prevImage()">⟵ Prev</button>
+      <button onclick="nextImage()">Next ⟶</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <footer>
+  <p>© 2025 Yaser Arafath M. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
